@@ -1,8 +1,13 @@
 package com.ilroberts;
 
-public class Main {
+import io.vertx.core.Vertx;
 
-    public static void main(String args[]) {
+public class Main   {
+
+    public static void main(String[] args) {
+        // Create an HTTP server which simply returns "Hello World!" to each request.
+        Vertx.vertx().deployVerticle(new MainVerticle());
     }
+
 
 }
